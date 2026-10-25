@@ -1081,3 +1081,17 @@ mark.fill {
 
 .site-footer-doc { padding-bottom: calc(30px + env(safe-area-inset-bottom)); }
 .footer-links a[aria-current="page"] { color: var(--ink); font-weight: 700; text-decoration: none; }
+
+/* Meta Pixel consent controls */
+.pixel-consent[hidden], .pixel-consent-settings[hidden] { display: none !important; }
+.pixel-consent { position: fixed; z-index: 10000; left: 16px; right: 16px; bottom: 16px; display: flex; align-items: center; justify-content: space-between; gap: 22px; max-width: 980px; margin: 0 auto; padding: 18px 20px; background: #fff; color: #14243A; border: 1px solid #d8dee7; border-radius: 12px; box-shadow: 0 12px 40px #14243a26; font: 14px/1.5 Inter, Arial, sans-serif; }
+.pixel-consent-copy { max-width: 650px; }
+.pixel-consent-copy strong { display: block; margin-bottom: 4px; font-size: 15px; }
+.pixel-consent-copy p { margin: 0; }
+.pixel-consent-copy a { color: #205b80; }
+.pixel-consent-actions { display: flex; flex: 0 0 auto; gap: 8px; }
+.pixel-consent-actions button, .pixel-consent-settings { min-height: 42px; padding: 9px 14px; border: 1px solid #205b80; border-radius: 6px; background: #fff; color: #205b80; font: 600 13px Inter, Arial, sans-serif; cursor: pointer; }
+.pixel-consent-actions button[data-pixel-choice="accept"] { background: #205b80; color: #fff; }
+.pixel-consent-settings { position: fixed; z-index: 9999; bottom: 12px; left: 12px; background: #fff; box-shadow: 0 4px 16px #14243a1a; }
+.pixel-consent-actions button:hover, .pixel-consent-settings:hover { filter: brightness(.94); }
+@media (max-width: 640px) { .pixel-consent { left: 10px; right: 10px; bottom: 10px; display: block; padding: 16px; } .pixel-consent-actions { margin-top: 12px; } .pixel-consent-actions button { flex: 1; } }
